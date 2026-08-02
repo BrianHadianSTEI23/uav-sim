@@ -4,3 +4,5 @@ log/
 .venv/
 .env/
 .vscode/
+fpga/hls/prj_path_planner/
+fpga/hls/transcript
