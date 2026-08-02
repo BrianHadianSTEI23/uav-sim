@@ -1,0 +1,71 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro">
+
+  <!-- Materials -->
+  <material name="dark_grey">
+    <color rgba="0.2 0.2 0.2 1.0"/>
+  </material>
+  <material name="red">
+    <color rgba="0.8 0.1 0.1 1.0"/>
+  </material>
+
+  <!-- Dummy root link for ROS 2 / KDL compliance -->
+  <link name="base_footprint"/>
+
+  <joint name="base_footprint_joint" type="fixed">
+    <parent link="base_footprint"/>
+    <child link="base_link"/>
+    <origin xyz="0 0 0.1" rpy="0 0 0"/>
+  </joint>
+
+  <!-- Main Chassis Frame -->
+  <link name="base_link">
+    <visual>
+      <geometry>
+        <box size="0.30 0.30 0.08"/>
+      </geometry>
+      <material name="dark_grey"/>
+    </visual>
+    <collision>
+      <geometry>
+        <box size="0.30 0.30 0.08"/>
+      </geometry>
+    </collision>
+    <inertial>
+      <mass value="1.5"/>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <inertia ixx="0.012" ixy="0.0" ixz="0.0"
+               iyy="0.012" iyz="0.0"
+               izz="0.022"/>
+    </inertial>
+  </link>
+
+  <!-- Arm Macro -->
+  <xacro:macro name="rotor_arm" params="prefix x_mult y_mult">
+    <link name="arm_${prefix}">
+      <visual>
+        <geometry>
+          <cylinder length="0.15" radius="0.01"/>
+        </geometry>
+        <material name="dark_grey"/>
+      </visual>
+      <inertial>
+        <mass value="0.05"/>
+        <inertia ixx="0.0001" ixy="0" ixz="0" iyy="0.0001" iyz="0" izz="0.0001"/>
+      </inertial>
+    </link>
+
+    <joint name="arm_${prefix}_joint" type="fixed">
+      <parent link="base_link"/>
+      <child link="arm_${prefix}"/>
+      <origin xyz="${x_mult * 0.12} ${y_mult * 0.12} 0" rpy="0 1.5708 ${x_mult * y_mult * 0.7854}"/>
+    </joint>
+  </xacro:macro>
+
+  <!-- Instantiate 4 Arms -->
+  <xacro:rotor_arm prefix="front_right" x_mult="1" y_mult="-1"/>
+  <xacro:rotor_arm prefix="front_left"  x_mult="1" y_mult="1"/>
+  <xacro:rotor_arm prefix="back_right"  x_mult="-1" y_mult="-1"/>
+  <xacro:rotor_arm prefix="back_left"   x_mult="-1" y_mult="1"/>
+
+</robot>
