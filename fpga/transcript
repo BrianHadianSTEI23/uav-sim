@@ -1,0 +1,11 @@
+# sim/vsim.wlf opened as dataset "vsim"
+# Error opening /home/hadynata/vs-code-data/uav-fpga/uav-sim/tb/tb_axi_stream_cosim.vhd
+# Path name '/home/hadynata/vs-code-data/uav-fpga/uav-sim/tb/tb_axi_stream_cosim.vhd' doesn't exist.
+add wave -position insertpoint  \
+vsim:/tb_axi_stream_cosim/clk
+add wave -position insertpoint  \
+vsim:/tb_axi_stream_cosim/rst_n
+cls
+# invalid command name "cls"
+clear
+# [H[2J[3J

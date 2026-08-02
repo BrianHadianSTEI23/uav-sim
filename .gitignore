@@ -6,3 +6,5 @@ log/
 .vscode/
 fpga/hls/prj_path_planner/
 fpga/hls/transcript
+work/
+fpga/sim/modelsim.ini
