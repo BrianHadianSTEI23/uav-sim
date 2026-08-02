@@ -1,5 +1,5 @@
 # ==============================================================================
-# ROS 2 <-> Gazebo Sim Topic Bridge Mapping
+# ROS 2 <-> Gazebo Sim Topic Bridge Mapping (Updated with TF & Odometry)
 # ==============================================================================
 
 # 1. Clock (Gazebo -> ROS 2)
@@ -44,9 +44,23 @@
   gz_type_name: "gz.msgs.NavSat"
   direction: GZ_TO_ROS
 
-# 7. Velocity Commands (ROS 2 -> Gazebo) [Bidirectional/Control Input]
+# 7. Velocity Commands (ROS 2 -> Gazebo)
 - ros_topic_name: "/drone/cmd_vel"
   gz_topic_name: "/drone/cmd_vel"
   ros_type_name: "geometry_msgs/msg/Twist"
   gz_type_name: "gz.msgs.Twist"
   direction: ROS_TO_GZ
+
+# 8. Model Pose Odometry (Gazebo -> ROS 2) [Dynamic Frame Transform]
+- ros_topic_name: "/drone/odometry"
+  gz_topic_name: "/model/uav_drone/odometry"
+  ros_type_name: "nav_msgs/msg/Odometry"
+  gz_type_name: "gz.msgs.Odometry"
+  direction: GZ_TO_ROS
+
+# 9. Dynamic TF Transforms (Gazebo -> ROS 2)
+- ros_topic_name: "/tf"
+  gz_topic_name: "/model/uav_drone/pose"
+  ros_type_name: "tf2_msgs/msg/TFMessage"
+  gz_type_name: "gz.msgs.Pose_V"
+  direction: GZ_TO_ROS
