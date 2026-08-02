@@ -1,0 +1,331 @@
+<sdf version='1.11'>
+  <model name='uav_drone'>
+    <link name='base_footprint'>
+      <inertial>
+        <pose>0.0024590163934426219 0 0.1032786885245902 0 0 0</pose>
+        <mass>1.8300000000000001</mass>
+        <inertia>
+          <ixx>0.01568032786885246</ixx>
+          <ixy>0</ixy>
+          <ixz>1.4754098360655741e-05</ixz>
+          <iyy>0.016344262295081961</iyy>
+          <iyz>0</iyz>
+          <izz>0.02888393442622951</izz>
+        </inertia>
+      </inertial>
+      <collision name='base_footprint_fixed_joint_lump__base_link_collision'>
+        <pose>0 0 0.10000000000000001 0 0 0</pose>
+        <geometry>
+          <box>
+            <size>0.29999999999999999 0.29999999999999999 0.080000000000000002</size>
+          </box>
+        </geometry>
+      </collision>
+      <collision name='base_footprint_fixed_joint_lump__camera_link_collision_1'>
+        <pose>0.14999999999999999 0 0.10000000000000001 0 0 0</pose>
+        <geometry>
+          <box>
+            <size>0.02 0.050000000000000003 0.02</size>
+          </box>
+        </geometry>
+        <surface>
+          <contact>
+            <ode/>
+          </contact>
+          <friction>
+            <ode/>
+          </friction>
+        </surface>
+      </collision>
+      <collision name='base_footprint_fixed_joint_lump__lidar_link_collision_2'>
+        <pose>0 0 0.16 0 0 0</pose>
+        <geometry>
+          <cylinder>
+            <length>0.040000000000000001</length>
+            <radius>0.035000000000000003</radius>
+          </cylinder>
+        </geometry>
+        <surface>
+          <contact>
+            <ode/>
+          </contact>
+          <friction>
+            <ode/>
+          </friction>
+        </surface>
+      </collision>
+      <visual name='base_footprint_fixed_joint_lump__base_link_visual'>
+        <pose>0 0 0.10000000000000001 0 0 0</pose>
+        <geometry>
+          <box>
+            <size>0.29999999999999999 0.29999999999999999 0.080000000000000002</size>
+          </box>
+        </geometry>
+        <material>
+          <diffuse>0.25 0.25 0.25 1</diffuse>
+          <ambient>0.25 0.25 0.25 1</ambient>
+        </material>
+      </visual>
+      <visual name='base_footprint_fixed_joint_lump__arm_back_left_visual_1'>
+        <pose>-0.12 0.12 0.10000000000000001 0.78539999999999999 1.5707963267948966 0</pose>
+        <geometry>
+          <cylinder>
+            <length>0.14999999999999999</length>
+            <radius>0.01</radius>
+          </cylinder>
+        </geometry>
+        <material>
+          <diffuse>0.25 0.25 0.25 1</diffuse>
+          <ambient>0.25 0.25 0.25 1</ambient>
+        </material>
+      </visual>
+      <visual name='base_footprint_fixed_joint_lump__arm_back_right_visual_2'>
+        <pose>-0.12 -0.12 0.10000000000000001 -0.78539999999999999 1.5707963267948966 0</pose>
+        <geometry>
+          <cylinder>
+            <length>0.14999999999999999</length>
+            <radius>0.01</radius>
+          </cylinder>
+        </geometry>
+        <material>
+          <diffuse>0.25 0.25 0.25 1</diffuse>
+          <ambient>0.25 0.25 0.25 1</ambient>
+        </material>
+      </visual>
+      <visual name='base_footprint_fixed_joint_lump__arm_front_left_visual_3'>
+        <pose>0.12 0.12 0.10000000000000001 -0.78539999999999999 1.5707963267948966 0</pose>
+        <geometry>
+          <cylinder>
+            <length>0.14999999999999999</length>
+            <radius>0.01</radius>
+          </cylinder>
+        </geometry>
+        <material>
+          <diffuse>0.25 0.25 0.25 1</diffuse>
+          <ambient>0.25 0.25 0.25 1</ambient>
+        </material>
+      </visual>
+      <visual name='base_footprint_fixed_joint_lump__arm_front_right_visual_4'>
+        <pose>0.12 -0.12 0.10000000000000001 0.78539999999999999 1.5707963267948966 0</pose>
+        <geometry>
+          <cylinder>
+            <length>0.14999999999999999</length>
+            <radius>0.01</radius>
+          </cylinder>
+        </geometry>
+        <material>
+          <diffuse>0.25 0.25 0.25 1</diffuse>
+          <ambient>0.25 0.25 0.25 1</ambient>
+        </material>
+      </visual>
+      <visual name='base_footprint_fixed_joint_lump__camera_link_visual_5'>
+        <pose>0.14999999999999999 0 0.10000000000000001 0 0 0</pose>
+        <geometry>
+          <box>
+            <size>0.02 0.050000000000000003 0.02</size>
+          </box>
+        </geometry>
+        <material>
+          <diffuse>0 0 0 1</diffuse>
+          <ambient>0 0 0 1</ambient>
+        </material>
+      </visual>
+      <visual name='base_footprint_fixed_joint_lump__gps_link_visual_6'>
+        <pose>-0.080000000000000002 0 0.14999999999999999 0 0 0</pose>
+        <geometry>
+          <cylinder>
+            <length>0.01</length>
+            <radius>0.02</radius>
+          </cylinder>
+        </geometry>
+        <material>
+          <diffuse>0 0 0 1</diffuse>
+          <ambient>0 0 0 1</ambient>
+        </material>
+      </visual>
+      <visual name='base_footprint_fixed_joint_lump__lidar_link_visual_7'>
+        <pose>0 0 0.16 0 0 0</pose>
+        <geometry>
+          <cylinder>
+            <length>0.040000000000000001</length>
+            <radius>0.035000000000000003</radius>
+          </cylinder>
+        </geometry>
+        <material>
+          <diffuse>0 0.25 1 1</diffuse>
+          <ambient>0 0.25 1 1</ambient>
+        </material>
+      </visual>
+      <sensor name='front_camera' type='camera'>
+        <always_on>true</always_on>
+        <update_rate>30</update_rate>
+        <visualize>true</visualize>
+        <topic>/drone/front_camera/image_raw</topic>
+        <camera>
+          <horizontal_fov>1.3962600000000001</horizontal_fov>
+          <image>
+            <width>640</width>
+            <height>480</height>
+            <format>R8G8B8</format>
+          </image>
+          <clip>
+            <near>0.050000000000000003</near>
+            <far>100</far>
+          </clip>
+          <noise>
+            <type>gaussian</type>
+            <mean>0</mean>
+            <stddev>0.0070000000000000001</stddev>
+          </noise>
+        </camera>
+        <pose>0.14999999999999999 0 0.10000000000000001 0 0 0</pose>
+        <gz_frame_id>camera_link_optical</gz_frame_id>
+      </sensor>
+      <sensor name='navsat_sensor' type='navsat'>
+        <always_on>true</always_on>
+        <update_rate>10</update_rate>
+        <topic>/drone/gps/navsat</topic>
+        <pose>-0.080000000000000002 0 0.14999999999999999 0 0 0</pose>
+        <gz_frame_id>gps_link</gz_frame_id>
+        <gps/>
+      </sensor>
+      <sensor name='imu_sensor' type='imu'>
+        <always_on>true</always_on>
+        <update_rate>200</update_rate>
+        <topic>/drone/imu/data</topic>
+        <imu>
+          <angular_velocity>
+            <x>
+              <noise type='gaussian'>
+                <stddev>0.00020000000000000001</stddev>
+              </noise>
+            </x>
+            <y>
+              <noise type='gaussian'>
+                <stddev>0.00020000000000000001</stddev>
+              </noise>
+            </y>
+            <z>
+              <noise type='gaussian'>
+                <stddev>0.00020000000000000001</stddev>
+              </noise>
+            </z>
+          </angular_velocity>
+          <linear_acceleration>
+            <x>
+              <noise type='gaussian'>
+                <stddev>0.01</stddev>
+              </noise>
+            </x>
+            <y>
+              <noise type='gaussian'>
+                <stddev>0.01</stddev>
+              </noise>
+            </y>
+            <z>
+              <noise type='gaussian'>
+                <stddev>0.01</stddev>
+              </noise>
+            </z>
+          </linear_acceleration>
+        </imu>
+        <pose>0 0 0.10000000000000001 0 0 0</pose>
+        <gz_frame_id>imu_link</gz_frame_id>
+      </sensor>
+      <sensor name='3d_lidar' type='gpu_lidar'>
+        <always_on>true</always_on>
+        <update_rate>10</update_rate>
+        <visualize>true</visualize>
+        <topic>/drone/lidar/points</topic>
+        <ray>
+          <scan>
+            <horizontal>
+              <samples>360</samples>
+              <resolution>1</resolution>
+              <min_angle>-3.1415899999999999</min_angle>
+              <max_angle>3.1415899999999999</max_angle>
+            </horizontal>
+            <vertical>
+              <samples>16</samples>
+              <resolution>1</resolution>
+              <min_angle>-0.261799</min_angle>
+              <max_angle>0.261799</max_angle>
+            </vertical>
+          </scan>
+          <range>
+            <min>0.20000000000000001</min>
+            <max>30</max>
+            <resolution>0.01</resolution>
+          </range>
+          <noise>
+            <type>gaussian</type>
+            <mean>0</mean>
+            <stddev>0.0080000000000000002</stddev>
+          </noise>
+        </ray>
+        <pose>0 0 0.16 0 0 0</pose>
+        <gz_frame_id>lidar_link</gz_frame_id>
+      </sensor>
+    </link>
+    <frame name='arm_back_left_joint' attached_to='base_link'>
+      <pose>-0.12 0.12 0 3.1415926535746803 1.5707926536662187 2.3561926535787308</pose>
+    </frame>
+    <frame name='arm_back_left' attached_to='arm_back_left_joint'>
+      <pose>0 0 0 0 0 0</pose>
+    </frame>
+    <frame name='arm_back_right_joint' attached_to='base_link'>
+      <pose>-0.12 -0.12 0 -3.1415926535746803 1.5707926537266703 -2.3561926535876618</pose>
+    </frame>
+    <frame name='arm_back_right' attached_to='arm_back_right_joint'>
+      <pose>0 0 0 0 0 0</pose>
+    </frame>
+    <frame name='arm_front_left_joint' attached_to='base_link'>
+      <pose>0.12 0.12 0 -3.1415926535746803 1.5707926537266703 -2.3561926535876618</pose>
+    </frame>
+    <frame name='arm_front_left' attached_to='arm_front_left_joint'>
+      <pose>0 0 0 0 0 0</pose>
+    </frame>
+    <frame name='arm_front_right_joint' attached_to='base_link'>
+      <pose>0.12 -0.12 0 3.1415926535746803 1.5707926536662187 2.3561926535787308</pose>
+    </frame>
+    <frame name='arm_front_right' attached_to='arm_front_right_joint'>
+      <pose>0 0 0 0 0 0</pose>
+    </frame>
+    <frame name='camera_optical_joint' attached_to='camera_link'>
+      <pose>0 0 0 -1.5708 -5.5511151231257827e-17 -1.5708</pose>
+    </frame>
+    <frame name='camera_link_optical' attached_to='camera_optical_joint'>
+      <pose>0 0 0 0 0 0</pose>
+    </frame>
+    <frame name='camera_joint' attached_to='base_link'>
+      <pose>0.14999999999999999 0 0 0 0 0</pose>
+    </frame>
+    <frame name='camera_link' attached_to='camera_joint'>
+      <pose>0 0 0 0 0 0</pose>
+    </frame>
+    <frame name='gps_joint' attached_to='base_link'>
+      <pose>-0.080000000000000002 0 0.050000000000000003 0 0 0</pose>
+    </frame>
+    <frame name='gps_link' attached_to='gps_joint'>
+      <pose>0 0 0 0 0 0</pose>
+    </frame>
+    <frame name='imu_joint' attached_to='base_link'>
+      <pose>0 0 0 0 0 0</pose>
+    </frame>
+    <frame name='imu_link' attached_to='imu_joint'>
+      <pose>0 0 0 0 0 0</pose>
+    </frame>
+    <frame name='lidar_joint' attached_to='base_link'>
+      <pose>0 0 0.059999999999999998 0 0 0</pose>
+    </frame>
+    <frame name='lidar_link' attached_to='lidar_joint'>
+      <pose>0 0 0 0 0 0</pose>
+    </frame>
+    <frame name='base_footprint_joint' attached_to='base_footprint'>
+      <pose>0 0 0.10000000000000001 0 0 0</pose>
+    </frame>
+    <frame name='base_link' attached_to='base_footprint_joint'>
+      <pose>0 0 0 0 0 0</pose>
+    </frame>
+  </model>
+</sdf>

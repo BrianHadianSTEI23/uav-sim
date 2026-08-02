@@ -4,5 +4,6 @@
   <!-- Include Sub-modules -->
   <xacro:include filename="$(find uav_description)/urdf/drone_core.xacro"/>
   <xacro:include filename="$(find uav_description)/urdf/sensors.xacro"/>
+  <xacro:include filename="$(find uav_description)/urdf/gazebo_sensors.xacro"/>
 
 </robot>
