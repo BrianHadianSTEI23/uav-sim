@@ -1,0 +1,7 @@
+v 4
+file . "../tb/tb_voxel_downsampler.vhd" "aa5d140931ca7d07a39ee85daf13cdf39027a72b" "20260802071822.988":
+  entity tb_voxel_downsampler at 1( 0) + 0 on 13;
+  architecture sim of tb_voxel_downsampler at 9( 184) + 0 on 14;
+file . "../hdl/voxel_downsampler.vhd" "0cd53093cf2ecab8b9c849f5acfb9bcd65f57c4d" "20260802071822.985":
+  entity voxel_downsampler at 1( 0) + 0 on 11;
+  architecture rtl of voxel_downsampler at 34( 1182) + 0 on 12;
