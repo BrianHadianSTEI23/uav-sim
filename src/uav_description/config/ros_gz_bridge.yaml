@@ -1,0 +1,52 @@
+# ==============================================================================
+# ROS 2 <-> Gazebo Sim Topic Bridge Mapping
+# ==============================================================================
+
+# 1. Clock (Gazebo -> ROS 2)
+- ros_topic_name: "/clock"
+  gz_topic_name: "/clock"
+  ros_type_name: "rosgraph_msgs/msg/Clock"
+  gz_type_name: "gz.msgs.Clock"
+  direction: GZ_TO_ROS
+
+# 2. 3D LiDAR PointCloud2 (Gazebo -> ROS 2)
+- ros_topic_name: "/drone/lidar/points"
+  gz_topic_name: "/drone/lidar/points/points"
+  ros_type_name: "sensor_msgs/msg/PointCloud2"
+  gz_type_name: "gz.msgs.PointCloudPacked"
+  direction: GZ_TO_ROS
+
+# 3. Camera Image Stream (Gazebo -> ROS 2)
+- ros_topic_name: "/drone/front_camera/image_raw"
+  gz_topic_name: "/drone/front_camera/image_raw"
+  ros_type_name: "sensor_msgs/msg/Image"
+  gz_type_name: "gz.msgs.Image"
+  direction: GZ_TO_ROS
+
+# 4. Camera Info Metadata (Gazebo -> ROS 2)
+- ros_topic_name: "/drone/front_camera/camera_info"
+  gz_topic_name: "/drone/front_camera/camera_info"
+  ros_type_name: "sensor_msgs/msg/CameraInfo"
+  gz_type_name: "gz.msgs.CameraInfo"
+  direction: GZ_TO_ROS
+
+# 5. IMU Telemetry (Gazebo -> ROS 2)
+- ros_topic_name: "/drone/imu/data"
+  gz_topic_name: "/drone/imu/data"
+  ros_type_name: "sensor_msgs/msg/Imu"
+  gz_type_name: "gz.msgs.IMU"
+  direction: GZ_TO_ROS
+
+# 6. GPS / NavSat Data (Gazebo -> ROS 2)
+- ros_topic_name: "/drone/gps/navsat"
+  gz_topic_name: "/drone/gps/navsat"
+  ros_type_name: "sensor_msgs/msg/NavSatFix"
+  gz_type_name: "gz.msgs.NavSat"
+  direction: GZ_TO_ROS
+
+# 7. Velocity Commands (ROS 2 -> Gazebo) [Bidirectional/Control Input]
+- ros_topic_name: "/drone/cmd_vel"
+  gz_topic_name: "/drone/cmd_vel"
+  ros_type_name: "geometry_msgs/msg/Twist"
+  gz_type_name: "gz.msgs.Twist"
+  direction: ROS_TO_GZ
