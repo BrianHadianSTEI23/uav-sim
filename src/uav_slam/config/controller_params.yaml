@@ -1,0 +1,22 @@
+geometric_controller_node:
+  ros__parameters:
+    # Drone Physical Parameters
+    mass: 1.5                   # Mass in kg
+    gravity: 9.81               # Gravity m/s^2
+    max_thrust: 30.0            # Max combined thrust (N)
+    max_tilt_deg: 35.0          # Max pitch/roll tilt angle limit (degrees)
+    max_velocity: 5.0           # Max translational velocity limit (m/s)
+
+    # Position Control Gains (Kp_pos, Kd_pos)
+    kp_x: 6.0
+    kp_y: 6.0
+    kp_z: 8.0
+    kd_x: 3.5
+    kd_y: 3.5
+    kd_z: 4.5
+
+    # Attitude / Heading Control Gains
+    kp_yaw: 2.5
+    
+    # Waypoint Tracking Thresholds
+    waypoint_tolerance: 0.25    # Radius in meters to consider waypoint reached

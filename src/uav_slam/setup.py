@@ -24,6 +24,7 @@ setup(
     entry_points={
         'console_scripts': [
             'pointcloud_filter_node = uav_slam.pointcloud_filter_node:main',
+            'geometric_controller_node = uav_slam.geometric_controller_node:main',
         ],
     },
 )
