@@ -1,0 +1,41 @@
+.pointcloud-card {
+  background: #161b22;
+  border: 1px solid #30363d;
+  border-radius: 8px;
+  padding: 16px;
+  margin-top: 20px;
+  color: #c9d1d9;
+}
+
+.pointcloud-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+.pointcloud-header h3 {
+  margin: 0;
+  font-size: 1.1rem;
+  color: #58a6ff;
+}
+
+.pointcloud-controls {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.85rem;
+}
+
+.ros3d-viewport {
+  width: 100%;
+  height: 500px;
+  border-radius: 6px;
+  overflow: hidden;
+  background-color: #0d1117;
+  cursor: grab;
+}
+
+.ros3d-viewport:active {
+  cursor: grabbing;
+}
