@@ -1,0 +1,14 @@
+octomap_server:
+  ros__parameters:
+    resolution: 0.25                # Voxel resolution in meters (matches FPGA 32x32x32 grid)
+    frame_id: "world"              # Global map frame
+    base_frame_id: "base_link"      # Drone body reference frame
+    height_map: true               # Colorize point cloud output by height
+    sensor_model:
+      max_range: 20.0              # Max LiDAR sensing distance (meters)
+      hit: 0.7                     # Probabilistic hit update increment
+      miss: 0.4                    # Probabilistic miss update decrement
+      min: 0.12                    # Min clamping threshold
+      max: 0.97                    # Max clamping threshold
+    filter_ground: false           # Set true for ground rover, false for 3D aerial flight
+    latch: false                   # Publish occupancy grid updates continuously
