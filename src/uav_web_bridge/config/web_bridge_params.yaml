@@ -1,0 +1,16 @@
+rosbridge_websocket:
+  ros__parameters:
+    port: 9090                      # WebSocket JSON Port
+    address: "0.0.0.0"              # Bind to all network interfaces
+    retry_startup_delay: 5.0          # Startup retry interval in seconds
+    max_message_size: 10000000      # Max payload size (10 MB)
+    unregister_timeout: 10.0
+
+web_video_server:
+  ros__parameters:
+    port: 8080                      # Web Video Streaming HTTP Port
+    address: "0.0.0.0"              # Bind to all network interfaces
+    server_threads: 2               # Concurrent streaming threads
+    ros_threads: 2                  # ROS spin threads
+    default_stream_type: "mjpeg"    # Default stream encoding format
+    quality: 75                     # JPEG compression quality (1-100)
