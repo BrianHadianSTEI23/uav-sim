@@ -64,7 +64,7 @@ def verify_quantized_model(fp32_path, int8_path):
 
     mse = np.mean((out_fp32 - out_int8) ** 2)
     print(f"[VERIFICATION] Mean Squared Error (FP32 vs INT8): {mse:.6f}")
-
+a
 if __name__ == "__main__":
     fp32_model = "models/obstacle_detector_fp32.onnx"
     int8_model = "models/obstacle_detector_int8.onnx"
